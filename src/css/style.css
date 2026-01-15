@@ -519,3 +519,7 @@ header select{
   text-align:left;
   vertical-align:top;
 }
+.apostador{
+  background: transparent;
+  backdrop-filter: blur(12px);
+}
