@@ -484,3 +484,38 @@ header select{
   margin: 4rem 0;
   text-align: center;
 }
+
+.tg  {
+  border-collapse:collapse;border-spacing:0;
+  width: 90vw;
+  height: 15vh;
+  position: absolute;
+  left: 5vw;
+  text-align: center;
+}
+.tg td{
+  border-color:rgb(216, 216, 216);
+  border-style:solid;
+  border-width:2px;
+  font-size:14px;
+  overflow:hidden;
+  padding:10px 5px;
+  word-break:normal;
+}
+.tg th{
+  border-color:rgb(208, 208, 208);
+  border-style:solid;
+  border-width:2px;
+  font-size:14px;
+  border-style:solid;
+  border-width:2px;
+  font-size:14px;
+  font-weight:normal;
+  overflow:hidden;
+  padding:10px 5px;
+  word-break:normal;
+}
+.tg .tg-0lax{
+  text-align:left;
+  vertical-align:top;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESU</title>
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="shortcut icon" href="../src/images/500x500.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    EVENTOS
+                </li>
+                <li>
+                    RANKINGS
+                </li>
+            </ul>
+        </nav>
+        <img onclick="gohome()" src="../src/images/textlogo.png" alt="logo">
+        <select id="collapsed-menu" onchange="headerselectionpage(this.value)">
+            <option value="inicio" name="inicio" selected disabled onselect="gohome()">INICIO</option>
+            <option value="eventos" name="eventos">EVENTOS</option>
+            <option value="rankings" name="rankings">RANKINGS</option>
+            <option value="redes" name="redes">REDES SOCIALES</option>
+            <option value="apuestas" name="apuestas">APUESTAS</option>
+            <option value="reglas" name="reglas">REGLAS</option>
+        </select>
+        <nav>
+            <li>
+                REDES SOCIALES
+            </li>
+            <li>
+                APUESTAS
+            </li>
+        </nav>
+    </header>
+    <content>
+        <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>DESCUBRE</h1>
+        <p class="tagline">los rankings de tus luchadores favoritos YA.</p>
+    </div>
+    </section>
+    <table class="tg"><thead>
+  <tr>
+    <th class="tg-0lax">
+        <h1>Sin datos aún.</h1>
+    </th>
+    <th class="tg-0lax">
+        <h1>Espera hasta el próximo gran evento.</h1>
+    </th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+  </tr>
+</tbody>
+</table>
+    <br><br><br><br><br><br><br><br><br><br>
+    </content>
+    <div class="cookies">
+        <h1>
+            Aceptar cookies?
+        </h1>
+        <nav>
+            <button onclick="biscuits.accept()">
+                Aceptar
+            </button>
+            <button onclick="biscuits.reject()">
+                Rechazar todas
+            </button>
+        </nav>
+    </div>
+    <script src="../src/js/index.js"></script>
+</body>
+</html>
