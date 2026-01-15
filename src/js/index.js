@@ -1,12 +1,11 @@
+var currentpage = window.location.pathname;
+
 function gohome(){
     document.querySelector("header select").value = "inicio";
     setTimeout(() => {
         document.location.href = "/";
     }, 300);
 }
-document.body.addEventListener("scroll", (e) => {
-    alert("hola")
-})
 if(!localStorage.getItem("cookies")){
     document.querySelector(".cookies").style.bottom = "5vw";
     setTimeout(() => {
@@ -28,5 +27,48 @@ var biscuits = {
     },
     reject: function(){
         document.querySelector(".cookies").style.bottom = "-50vw";
+    }
+}
+
+//when scrolling, if scrollY > 100, add class "scrolled" to header, else remove it
+window.addEventListener("scroll", () => {
+    if(window.scrollY > 100){
+        document.querySelector("header").classList.add("scrolled");
+    }
+    else{
+        document.querySelector("header").classList.remove("scrolled");
+    }
+});
+window.addEventListener("load", () => {
+    document.querySelector("header select").value = currentpage.replaceAll("/", "") || "inicio";
+    document.querySelector("#collapsed-menu option[value='" + (currentpage.replaceAll("/", "") || "inicio") + "']").disabled = true;
+    
+    if(currentpage != "/"){
+        document.querySelector("#collapsed-menu option[value='inicio']").disabled = false;
+    }
+});
+
+function headerselectionpage(val){
+    switch (val) {
+        case "inicio":
+            document.location.href = "/";
+            gohome();
+            break;
+        case "eventos":
+            document.location.href = "/eventos";
+            break;
+        case "rankings":
+            document.location.href = "/rankings";
+            break;
+        case "redes":
+            document.location.href = "/redes";
+            break;
+        case "apuestas":
+            document.location.href = "/apuestas";
+            break;
+        default:
+            document.location.href = "/";
+            gohome();
+            break;
     }
 }
