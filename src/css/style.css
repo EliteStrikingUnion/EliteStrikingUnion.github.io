@@ -11,7 +11,7 @@ header{
     left: 2vw;
     width: 96vw;
     height: 10vh;
-    background: rgba(10, 10, 10, 0.92); 
+    background: rgba(10, 10, 10, 0.6); 
     backdrop-filter: blur(12px);
     border-radius: 0 0 20px 20px; 
     border-bottom: 3px solid #c8102e;  
@@ -19,6 +19,14 @@ header{
     border-radius: 30px;
     font-family: 'Impact', sans-serif;
     transition: all .3s ease;
+    z-index: 9999999;
+}
+header.scrolled{
+    height: 8vh;
+    top: 0;
+    border-radius: 0 0 10px 10px;
+    left: 0;
+    width: 100vw;
 }
 header img[alt="logo"]{
     position: absolute;
@@ -160,4 +168,248 @@ header select{
         width: 100%;
         height: 100%;
     }
+}
+
+/* reset básico y global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #e0e0e0;
+  font-family: 'Oswald', 'Impact', sans-serif;
+  line-height: 1.2;
+}
+
+/* hero: full brutal */
+.hero {
+  height: 100vh;
+  min-height: 700px;
+  background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.9)), url('./src/images/hero-bg-dark.jpg') center/cover no-repeat fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  margin-top: 14vh;
+}
+
+.hero-content {
+  max-width: 1200px;
+  padding: 0 5%;
+}
+
+.hero h1 {
+  font-size: clamp(6rem, 12vw, 14rem);
+  font-weight: 900;
+  color: #b22222;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-shadow: 0 0 30px rgba(178, 34, 34, 0.6), 0 0 60px rgba(178, 34, 34, 0.3);
+  margin-bottom: 0.5rem;
+  line-height: 0.9;
+}
+
+.tagline {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  margin: 1rem 0 2rem;
+}
+
+.subtag {
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  color: #888;
+  letter-spacing: 0.2em;
+  margin-bottom: 4rem;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.btn {
+  padding: 1.2rem 3rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.primary {
+  background: #b22222;
+  color: #fff;
+  box-shadow: 0 0 25px rgba(178, 34, 34, 0.4);
+}
+
+.primary:hover {
+  background: #8b0000;
+  box-shadow: 0 0 40px rgba(139, 0, 0, 0.7);
+  transform: translateY(-3px);
+}
+
+.secondary {
+  background: transparent;
+  border: 3px solid #b22222;
+  color: #b22222;
+}
+
+.secondary:hover {
+  background: #b22222;
+  color: #000;
+  box-shadow: 0 0 30px rgba(178, 34, 34, 0.5);
+}
+
+/* upcoming events */
+.upcoming {
+  padding: 8rem 5% 6rem;
+  background: #0a0a0a;
+  border-top: 1px solid #222;
+}
+
+.upcoming h2 {
+  font-size: 4rem;
+  text-align: center;
+  color: #b22222;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin-bottom: 4rem;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 2.5rem;
+}
+
+.event-card {
+  background: #111;
+  border: 1px solid #222;
+  padding: 2.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.event-card:hover {
+  border-color: #b22222;
+  box-shadow: 0 0 35px rgba(178, 34, 34, 0.25);
+  transform: translateY(-8px);
+}
+
+.event-date {
+  font-size: 2.2rem;
+  color: #b22222;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+}
+
+.event-title {
+  font-size: 2.2rem;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.event-subtitle, .event-fight, .event-location {
+  font-size: 1.3rem;
+  color: #aaa;
+  margin: 0.6rem 0;
+}
+
+/* reglas section similar vibe */
+.rules {
+  padding: 6rem 5%;
+  background: #000;
+  text-align: center;
+}
+
+.rules h2 {
+  font-size: 4rem;
+  color: #b22222;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin-bottom: 3rem;
+}
+
+.rules-list {
+  list-style: none;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-size: 1.4rem;
+  line-height: 2;
+  color: #ccc;
+}
+
+.rules-list li {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.rules-list li::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  color: #b22222;
+  font-weight: bold;
+}
+
+/* fighters teaser */
+.fighters {
+  padding: 6rem 5%;
+  background: #0a0a0a;
+}
+
+.fighters h2 {
+  font-size: 4rem;
+  text-align: center;
+  color: #b22222;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin-bottom: 3rem;
+}
+
+.teaser-text {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #888;
+  margin-bottom: 4rem;
+}
+
+.fighters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.fighter-card img {
+  width: 100%;
+  filter: grayscale(80%) brightness(0.6);
+  transition: all 0.4s ease;
+  border: 2px solid #222;
+}
+
+.fighter-card img:hover {
+  filter: grayscale(0%) brightness(1);
+  border-color: #b22222;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .hero h1 { font-size: clamp(4rem, 10vw, 8rem); }
+  .tagline { font-size: clamp(1.8rem, 4vw, 3rem); }
+  .cta-buttons { flex-direction: column; gap: 1rem; }
+  .btn { width: 80%; margin: 0 auto; }
 }
