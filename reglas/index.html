@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESU</title>
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="shortcut icon" href="../src/images/500x500.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li onclick="window.location.href='/eventos/'">
+                    EVENTOS
+                </li>
+                <li onclick="window.location.href='/rankings/'">
+                    RANKINGS
+                </li>
+            </ul>
+        </nav>
+        <img onclick="gohome()" src="../src/images/textlogo.png" alt="logo">
+        <select id="collapsed-menu" onchange="headerselectionpage(this.value)">
+            <option value="inicio" name="inicio" selected disabled onselect="gohome()">INICIO</option>
+            <option value="eventos" name="eventos">EVENTOS</option>
+            <option value="rankings" name="rankings">RANKINGS</option>
+            <option value="redes" name="redes">REDES SOCIALES</option>
+            <option value="apuestas" name="apuestas">APUESTAS</option>
+            <option value="reglas" name="reglas">REGLAS</option>
+        </select>
+        <nav>
+            <li onclick="window.location.href='/redes/'">
+                REDES SOCIALES
+            </li>
+            <li onclick="window.location.href='/apuestas/'">
+                APUESTAS
+            </li>
+        </nav>
+    </header>
+    <content>
+        <!-- reglas.html - Contenido principal -->
+<section class="rules-section">
+  <h1>REGLAS OFICIALES DE COMBATE</h1>
+  <h2>Elite Striking Union (E.S.U.)</h2>
+  <p class="intro">Striking puro. Sin suelo. Sin piedad. Temporada 2026-2027.</p>
+
+  <div class="rules-container">
+    <h3>1. Estilo y Objetivo</h3>
+    <ul>
+      <li>Combate de pie exclusivo: solo golpes con puños, patadas y rodillas limitadas.</li>
+      <li>Fusión obligatoria de tres disciplinas: boxeo (puños y movimiento de cabeza), karate (golpes lineales y precisos) y taekwondo (patadas altas y giratorias).</li>
+      <li>Prohibido: derribos, grappling, sumisiones, suelo, codos, golpes a la nuca o genitales.</li>
+      <li>El objetivo es neutralizar al oponente mediante KO, TKO o superioridad en puntos.</li>
+    </ul>
+
+    <h3>2. Rondas y Duración</h3>
+    <ul>
+      <li>Formato estándar amateur: 3 rounds de 3 minutos cada uno.</li>
+      <li>Descanso entre rounds: 1 minuto exacto.</li>
+      <li>Eventos elite o finales: posibilidad de 5 rounds (decidido por la Organización con antelación).</li>
+      <li>El reloj corre continuo salvo intervención del árbitro.</li>
+    </ul>
+
+    <h3>3. Equipo Obligatorio</h3>
+    <ul>
+      <li>Guantes de boxeo: 10-12 oz (acolchados, aprobados por E.S.U.).</li>
+      <li>Casco protector: obligatorio en todas las categorías amateur.</li>
+      <li>Protector bucal y coquillo (cup) de uso forzoso.</li>
+      <li>Espinilleras y vendajes de manos permitidos y recomendados.</li>
+      <li>Uniforme oficial: gi negro con logo ESU en pecho y espalda (o shorts negros lisos para boxeadores puros).</li>
+      <li>Calzado: descalzo o zapatos ligeros de artes marciales (prohibidos zapatos de boxeo con suela dura).</li>
+    </ul>
+
+    <h3>4. Sistema de Puntuación</h3>
+    <ul>
+      <li>3 jueces independientes.</li>
+      <li>Puntos por golpe limpio y efectivo:</li>
+        <ul class="sub-list">
+          <li>Puño al torso o cabeza (boxeo): 1 punto</li>
+          <li>Patada al torso (karate/tkd): 2 puntos</li>
+          <li>Patada alta o giratoria a cabeza: 3-4 puntos</li>
+          <li>Combinación efectiva (3+ golpes limpios): bono de 1-2 puntos</li>
+        </ul>
+      <li>Knockdown: +5 puntos inmediatos al que lo causa.</li>
+      <li>Criterios de desempate: agresividad, control del ring, técnica y defensa.</li>
+      <li>Puntuación acumulada al final de los rounds decide ganador por decisión unánime, dividida o mayoritaria.</li>
+    </ul>
+
+    <h3>5. Formas de Victoria</h3>
+    <ul>
+      <li>Knockout (KO): oponente no se recupera en conteo de 10 segundos.</li>
+      <li>Técnico Knockout (TKO): árbitro detiene la pelea por incapacidad clara, lesión o abandono.</li>
+      <li>Decisión de jueces: al finalizar los rounds.</li>
+      <li>Descalificación: faltas graves repetidas o conducta antideportiva.</li>
+      <li>Rendición verbal o tap-out (aunque raro en striking puro).</li>
+    </ul>
+
+    <h3>6. Faltas y Prohibiciones</h3>
+    <ul>
+      <li>Golpes ilegales: nuca, espalda, genitales, garganta, articulaciones pequeñas.</li>
+      <li>Derribos intencionales o barridos agresivos que lleven al suelo.</li>
+      <li>Clinching prolongado (máximo 3 segundos; romper inmediato).</li>
+      <li>Abuso verbal, gestos antideportivos o falta de respeto al árbitro/Organización.</li>
+      <li>Primer foul: advertencia verbal. Segundo: punto deducido. Tercero: descalificación.</li>
+    </ul>
+
+    <h3>7. Procedimientos Pre-Pelea</h3>
+    <ul>
+      <li>Pesaje oficial 24-48 horas antes (categorías estándar de boxeo amateur).</li>
+      <li>Chequeo médico básico obligatorio (presión, visión, declaración de salud).</li>
+      <li>Firma del contrato de participación y waiver de responsabilidad antes del primer combate.</li>
+      <li>Reunión técnica con árbitro 30 minutos antes del evento.</li>
+    </ul>
+
+    <h3>8. Arbitraje y Decisiones</h3>
+    <ul>
+      <li>Árbitro central con autoridad absoluta durante el combate.</li>
+      <li>Decisión del árbitro es final e inapelable.</li>
+      <li>La Organización (anfitrión) se reserva el derecho de modificar reglas por seguridad o formato especial con aviso previo.</li>
+    </ul>
+
+    <p class="final-note">Todo participante acepta estos riesgos y reglas al firmar su ficha de participación. No hay lugar para excusas. En ESU se golpea de pie, se gana de pie o se pierde de pie.</p>
+  </div>
+</section>
+    </content>
+    <div class="cookies">
+        <h1>
+            Aceptar cookies?
+        </h1>
+        <nav>
+            <button onclick="biscuits.accept()">
+                Aceptar
+            </button>
+            <button onclick="biscuits.reject()">
+                Rechazar todas
+            </button>
+        </nav>
+    </div>
+    <script src="../src/js/index.js"></script>
+</body>
+</html>
