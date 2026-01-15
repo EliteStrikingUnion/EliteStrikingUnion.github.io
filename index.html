@@ -20,12 +20,12 @@
             </ul>
         </nav>
         <img onclick="gohome()" src="./src/images/textlogo.png" alt="logo">
-        <select id="collapsed-menu">
-            <option value="inicio" selected disabled>INICIO</option>
-            <option value="eventos">EVENTOS</option>
-            <option value="rankings">RANKINGS</option>
-            <option value="redes">REDES SOCIALES</option>
-            <option value="apuestas">APUESTAS</option>
+        <select id="collapsed-menu" onchange="headerselectionpage(this.value)">
+            <option value="inicio" name="inicio" selected disabled onselect="gohome()">INICIO</option>
+            <option value="eventos" name="eventos">EVENTOS</option>
+            <option value="rankings" name="rankings">RANKINGS</option>
+            <option value="redes" name="redes">REDES SOCIALES</option>
+            <option value="apuestas" name="apuestas">APUESTAS</option>
         </select>
         <nav>
             <li>
@@ -36,6 +36,83 @@
             </li>
         </nav>
     </header>
+    <content>
+        <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>ELITE STRIKING UNION</h1>
+      <p class="tagline">Striking Puro. Guerreros Unidos.</p>
+      <p class="subtag">La evolución del golpe. Xalapa. Temporada 2026-2027.</p>
+      
+      <div class="cta-buttons">
+        <a href="#eventos" class="btn primary">Próximo Evento</a>
+        <a href="#reglas" class="btn secondary">Reglas Oficiales</a>
+        <a href="https://instagram.com/elitestrikingunion" target="_blank" class="btn social">Síguenos en Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upcoming Events Teaser (la sección más importante para hype) -->
+  <section id="eventos" class="upcoming">
+    <h2>Próximos Combates</h2>
+    <div class="events-grid">
+      <!-- Card de evento ejemplo (duplica para más) -->
+      <div class="event-card">
+        <div class="event-date">15 FEB 2026</div>
+        <div class="event-title">ESU Fight Night 01</div>
+        <div class="event-subtitle">Striking Puro • Boxeo vs Patadas</div>
+        <div class="event-fight">TBD vs TBD</div>
+        <div class="event-location">Jacarandas Arena (Gym Local)</div>
+        <a href="#" class="btn watch">Más Info</a>
+      </div>
+
+      <!-- Otro card placeholder -->
+      <div class="event-card highlighted">
+        <div class="event-date">MAR 2026</div>
+        <div class="event-title">ESU vs Housemma3 Challenge</div>
+        <div class="event-subtitle">Striking Elite vs MMA Amateur</div>
+        <div class="event-fight">Equipo ESU vs Equipo Housemma3</div>
+        <div class="event-location">Por Confirmar</div>
+        <a href="#" class="btn challenge">Reto Abierto</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Rules / Sobre ESU -->
+  <section id="reglas" class="rules">
+    <h2>Reglas de Striking Puro</h2>
+    <ul class="rules-list">
+      <li>Boxeo + Karate + Taekwondo fusionados: puños, patadas, rodillas limitadas.</li>
+      <li>Sin suelo, sin grappling, sin derribos agresivos.</li>
+      <li>Guantes 10-12 oz, casco obligatorio, gi negro ESU o shorts.</li>
+      <li>Rondas 3 × 3 min (amateur), puntuación por golpes limpios + técnica.</li>
+      <li>Knockdown: conteo 10. Victoria por KO, TKO o puntos.</li>
+    </ul>
+    <a href="reglas.html" class="btn full">Ver Reglas Completas</a>
+  </section>
+
+  <!-- Fighters Teaser (para generar misterio y hype) -->
+  <section class="fighters">
+    <h2>Nuestros Guerreros</h2>
+    <p class="teaser-text">Luchadores con experiencia real en boxeo, karate y taekwondo. Identidades protegidas hasta el evento.</p>
+    <div class="fighters-grid">
+      <!-- Siluetas o fotos con filtro oscuro, sin nombres -->
+      <div class="fighter-card"><img src="./src/images/fighter-silhouette1.jpg" alt="Fighter 1"></div>
+      <div class="fighter-card"><img src="./src/images/fighter-silhouette2.jpg" alt="Fighter 2"></div>
+      <div class="fighter-card"><img src="./src/images/fighter-silhouette3.jpg" alt="Fighter 3"></div>
+    </div>
+  </section>
+
+  <!-- Call to Action final / Newsletter -->
+  <section class="cta-final">
+    <h2>Únete al Movimiento</h2>
+    <p>Suscríbete para actualizaciones de eventos, retos y resultados.</p>
+    <form class="newsletter">
+      <input type="email" placeholder="Tu correo electrónico" required>
+      <button type="submit">Suscribirme</button>
+    </form>
+  </section>
+    </content>
     <div class="cookies">
         <h1>
             Aceptar cookies?
@@ -49,7 +126,7 @@
             </button>
         </nav>
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <script src="./src/js/index.js"></script>
 </body>
 </html>
