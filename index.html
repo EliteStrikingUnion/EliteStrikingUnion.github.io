@@ -11,10 +11,10 @@
     <header>
         <nav>
             <ul>
-                <li>
+                <li onclick="window.location.href='/eventos/'">
                     EVENTOS
                 </li>
-                <li>
+                <li onclick="window.location.href='/rankings/'">
                     RANKINGS
                 </li>
             </ul>
@@ -26,12 +26,13 @@
             <option value="rankings" name="rankings">RANKINGS</option>
             <option value="redes" name="redes">REDES SOCIALES</option>
             <option value="apuestas" name="apuestas">APUESTAS</option>
+            <option value="reglas" name="reglas">REGLAS</option>
         </select>
         <nav>
-            <li>
+            <li onclick="window.location.href='/redes/'">
                 REDES SOCIALES
             </li>
-            <li>
+            <li onclick="window.location.href='/apuestas/'">
                 APUESTAS
             </li>
         </nav>
@@ -47,6 +48,7 @@
       <div class="cta-buttons">
         <a href="#eventos" class="btn primary">Próximo Evento</a>
         <a href="#reglas" class="btn secondary">Reglas Oficiales</a>
+        <br>
         <a href="https://instagram.com/elitestrikingunion" target="_blank" class="btn social">Síguenos en Instagram</a>
       </div>
     </div>
@@ -57,23 +59,13 @@
     <h2>Próximos Combates</h2>
     <div class="events-grid">
       <!-- Card de evento ejemplo (duplica para más) -->
-      <div class="event-card">
+      <div class="event-card highlighted">
         <div class="event-date">15 FEB 2026</div>
         <div class="event-title">ESU Fight Night 01</div>
         <div class="event-subtitle">Striking Puro • Boxeo vs Patadas</div>
         <div class="event-fight">TBD vs TBD</div>
-        <div class="event-location">Jacarandas Arena (Gym Local)</div>
+        <div class="event-location">Por verse</div>
         <a href="#" class="btn watch">Más Info</a>
-      </div>
-
-      <!-- Otro card placeholder -->
-      <div class="event-card highlighted">
-        <div class="event-date">MAR 2026</div>
-        <div class="event-title">ESU vs Housemma3 Challenge</div>
-        <div class="event-subtitle">Striking Elite vs MMA Amateur</div>
-        <div class="event-fight">Equipo ESU vs Equipo Housemma3</div>
-        <div class="event-location">Por Confirmar</div>
-        <a href="#" class="btn challenge">Reto Abierto</a>
       </div>
     </div>
   </section>
@@ -88,7 +80,7 @@
       <li>Rondas 3 × 3 min (amateur), puntuación por golpes limpios + técnica.</li>
       <li>Knockdown: conteo 10. Victoria por KO, TKO o puntos.</li>
     </ul>
-    <a href="reglas.html" class="btn full">Ver Reglas Completas</a>
+    <a onclick="headerselectionpage('reglas')" class="btn full">Ver Reglas Completas</a>
   </section>
 
   <!-- Fighters Teaser (para generar misterio y hype) -->
