@@ -66,6 +66,9 @@ function headerselectionpage(val){
         case "apuestas":
             document.location.href = "/apuestas";
             break;
+        case "reglas":
+            document.location.href = "/reglas";
+            break;
         default:
             document.location.href = "/";
             gohome();
