@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESU</title>
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="shortcut icon" href="../src/images/500x500.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    EVENTOS
+                </li>
+                <li>
+                    RANKINGS
+                </li>
+            </ul>
+        </nav>
+        <img onclick="gohome()" src="../src/images/textlogo.png" alt="logo">
+        <select id="collapsed-menu" onchange="headerselectionpage(this.value)">
+            <option value="inicio" name="inicio" selected disabled onselect="gohome()">INICIO</option>
+            <option value="eventos" name="eventos">EVENTOS</option>
+            <option value="rankings" name="rankings">RANKINGS</option>
+            <option value="redes" name="redes">REDES SOCIALES</option>
+            <option value="apuestas" name="apuestas">APUESTAS</option>
+            <option value="reglas" name="reglas">REGLAS</option>
+        </select>
+        <nav>
+            <li>
+                REDES SOCIALES
+            </li>
+            <li>
+                APUESTAS
+            </li>
+        </nav>
+    </header>
+    <content>
+        <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>EVENTOS</h1>
+      <p class="tagline">Preparate..</p>
+      <p class="subtag">Desliza para ver más...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upcoming Events Teaser (la sección más importante para hype) -->
+  <section id="eventos" class="upcoming">
+    <h2>Próximos Combates</h2>
+    <div class="events-grid">
+      <!-- Card de evento ejemplo (duplica para más) -->
+      <div class="event-card highlighted">
+        <div class="event-date">15 FEB 2026</div>
+        <div class="event-title">ESU Fight Night 01</div>
+        <div class="event-subtitle">Striking Puro • Boxeo vs Patadas</div>
+        <div class="event-fight">TBD vs TBD</div>
+        <div class="event-location">Por verse</div>
+        <a href="#" class="btn watch">Más Info</a>
+      </div>
+    </div>
+  </section>
+    </content>
+    <div class="cookies">
+        <h1>
+            Aceptar cookies?
+        </h1>
+        <nav>
+            <button onclick="biscuits.accept()">
+                Aceptar
+            </button>
+            <button onclick="biscuits.reject()">
+                Rechazar todas
+            </button>
+        </nav>
+    </div>
+    <script src="../src/js/index.js"></script>
+</body>
+</html>
