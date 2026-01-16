@@ -183,7 +183,7 @@ header select{
 .hero {
   height: 100vh;
   min-height: 700px;
-  background: url('../images/hero.png') cover top;
+  background-image: url('/src/images/hero.png');
   display: flex;
   align-items: center;
   justify-content: center;
@@ -229,6 +229,56 @@ header select{
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
+}
+.cta-final{
+  margin-top: 5vh;
+  margin-left: 3vw;
+  width: 94vw;
+  background: rgba(21, 21, 21, 0.6); 
+  backdrop-filter: blur(12px);
+  border-radius: 20px; 
+  border-top: 3px solid #c8102e;  
+  box-shadow: 0 9px 25px 10px rgba(200, 16, 47, 0.318);
+  padding-top: 2vh;
+  padding-left: 2vh;
+  padding-bottom: 2vh;
+}
+.cta-final h2{
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #b22222;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-shadow: 0 0 30px rgba(178, 34, 34, 0.6), 0 0 60px rgba(178, 34, 34, 0.3);
+}
+.cta-final p{
+  font-size: 1.5rem;
+  color: #888;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.cta-final input{
+  width: 30%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  margin-right: 1rem;
+  background: #1b1b1b;
+  color: #fff;
+}
+.cta-final button{
+  padding: 1.2rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  border: none;
+  cursor: pointer;
+  background: #b22222;
+  color: #fff;
+  box-shadow: 0 0 25px rgba(178, 34, 34, 0.4);
+  transition: all 0.25s ease;
 }
 
 .btn {
@@ -407,6 +457,9 @@ header select{
   .tagline { font-size: clamp(1.8rem, 4vw, 3rem); }
   .cta-buttons { flex-direction: column; gap: 1rem; }
   .btn { width: 80%; margin: 0 auto; }
+  .left-column{
+    font-size: 2em;
+  }
 }
 
 .rules-section {
@@ -492,6 +545,12 @@ header select{
   position: absolute;
   left: 5vw;
   text-align: center;
+  transition: .3s all;
+}
+.tg:hover {
+  border: 2px solid #8b0000;
+  box-shadow: 0 0 40px rgba(139, 0, 0, 0.7);
+  transform: translateY(-3px);
 }
 .tg td{
   border-color:rgb(216, 216, 216);
@@ -518,6 +577,15 @@ header select{
 .tg .tg-0lax{
   text-align:left;
   vertical-align:top;
+}
+.left-column{
+  width: 15%;
+  text-align: center;
+  justify-content: center;
+  font-size: 1.2em;
+}
+.tg .tg-0lax img{
+  width: 90%;
 }
 .apostador{
   background: transparent;
