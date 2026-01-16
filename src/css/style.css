@@ -183,7 +183,7 @@ header select{
 .hero {
   height: 100vh;
   min-height: 700px;
-  background-image: url('/src/images/hero.png');
+  background-image: url('../images/hero.png');
   display: flex;
   align-items: center;
   justify-content: center;
