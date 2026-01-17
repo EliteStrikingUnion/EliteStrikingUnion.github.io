@@ -184,6 +184,10 @@ header select{
   height: 100vh;
   min-height: 700px;
   background-image: url('../images/hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.6);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -195,6 +199,7 @@ header select{
 .hero-content {
   max-width: 1200px;
   padding: 0 5%;
+  filter: brightness(1.6);
 }
 
 .hero h1 {
