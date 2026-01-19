@@ -89,5 +89,20 @@
         "style": "Box",
         "height": "168cm",
         "weight": "67kg"
+    },
+    "Hector": {
+        "id": 7,
+        "name": "Hector",
+        "image": "/src/images/luchadores/HECTOR.png",
+        "bio": "No vengo a ganar, vengo a divertirme.",
+        "record": {
+            "wins": 0,
+            "losses": 0,
+            "draws": 0
+        },
+        "edad": "14",
+        "style": "Box principiante",
+        "height": "171cm",
+        "weight": "55kg"
     }
 }
