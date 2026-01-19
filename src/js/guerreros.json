@@ -25,8 +25,10 @@
             "losses": 0,
             "draws": 0
         },
-        "style": "Karate y Kickboxing",
-        "edad": 14
+       "edad": 14,
+        "style": "Karate",
+        "height": "172cm",
+        "weight": "48kg"
     },
     "Iker": {
         "id": 3,
@@ -38,6 +40,69 @@
             "losses": 0,
             "draws": 0
         },
-        "edad": 14
+        "edad": 14,
+        "style": "Karate",
+        "height": "172cm",
+        "weight": "48kg"
+    },
+    "Wuermensol": {
+        "id": 4,
+        "name": "Wuermensol",
+        "image": "/src/images/luchadores/wuermensol.png",
+        "bio": "Para un chingon hay otro más chingon. Y ahí entro yo.",
+        "record": {
+            "wins": 0,
+            "losses": 0,
+            "draws": 0
+        },
+        "edad": "14",
+        "style": "Karate",
+        "height": "172cm",
+        "weight": "48kg"
+    },
+    "Lucho": {
+        "id": 5,
+        "name": "El rey infame",
+        "image": "/src/images/luchadores/wuermensol.png",
+        "bio": "Peleador disciplinado y constante, conocido como 'El rey infame'. Siempre busca dar lo mejor en el combate.",
+        "record": {
+            "wins": 0,
+            "losses": 0,
+            "draws": 0
+        },
+        "edad": "14",
+        "style": "Box",
+        "height": "169cm",
+        "weight": "63kg"
+    },
+    "Carlo": {
+        "id": 6,
+        "name": "Carlo",
+        "image": "/src/images/luchadores/CARLO.png",
+        "bio": "Si Dios esta conmigo, ¿Quién contra mi?",
+        "record": {
+            "wins": 0,
+            "losses": 0,
+            "draws": 0
+        },
+        "edad": "14",
+        "style": "Box",
+        "height": "165cm",
+        "weight": "67kg"
+    },
+    "Placeholder": {
+        "id": 67,
+        "name": "",
+        "image": "",
+        "bio": "",
+        "record": {
+            "wins": 0,
+            "losses": 0,
+            "draws": 0
+        },
+        "edad": "",
+        "style": "",
+        "height": "",
+        "weight": ""
     }
 }
