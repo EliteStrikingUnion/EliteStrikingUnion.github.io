@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESU</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9150208747161178"
+     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="shortcut icon" href="../src/images/500x500.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li onclick="window.location.href='/eventos/'">
+                    EVENTOS
+                </li>
+                <li onclick="window.location.href='/rankings/'">
+                    RANKINGS
+                </li>
+            </ul>
+        </nav>
+        <img onclick="gohome()" src="../src/images/textlogo.png" alt="logo">
+        <select id="collapsed-menu" onchange="headerselectionpage(this.value)">
+            <option value="inicio" name="inicio" selected disabled onselect="gohome()">INICIO</option>
+            <option value="eventos" name="eventos">EVENTOS</option>
+            <option value="rankings" name="rankings">RANKINGS</option>
+            <option value="redes" name="redes">REDES SOCIALES</option>
+            <option value="apuestas" name="apuestas">APUESTAS</option>
+            <option value="reglas" name="reglas">REGLAS</option>
+            <option value="luchadores" name="luchadores">LUCHADORES</option>
+        </select>
+        <nav>
+            <li onclick="window.location.href='/redes/'">
+                REDES SOCIALES
+            </li>
+            <li onclick="window.location.href='/apuestas/'">
+                APUESTAS
+            </li>
+        </nav>
+    </header>
+    <content>
+   <section class="fighters">
+    <h2>Nuestros Guerreros</h2>
+    <p class="teaser-text">¿Listo?</p>
+    <div class="fighters-grid">
+
+    </div>
+  </section>
+
+  <!-- Call to Action final / Newsletter -->
+  <section class="cta-final">
+    <h2>Únete al Movimiento</h2>
+    <p>Suscríbete para actualizaciones de eventos, retos y resultados.</p>
+    <form class="newsletter">
+      <input type="email" placeholder="Tu correo electrónico" required>
+      <button type="submit">Suscribirme</button>
+    </form>
+  </section>
+
+    <ins class="adsbygoogle"
+    style="display:inline-block;width:728px;height:90px"
+    data-ad-client="ca-pub-1234567890123456"
+    data-ad-slot="1234567890"></ins>
+    </content>
+    <div class="cookies">
+        <h1>
+            Aceptar cookies?
+        </h1>
+        <nav>
+            <button onclick="biscuits.accept()">
+                Aceptar
+            </button>
+            <button onclick="biscuits.reject()">
+                Rechazar todas
+            </button>
+        </nav>
+    </div>
+    <script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    <script src="../src/js/index.js"></script>
+    <script>
+        /*
+            <div class="fighter-card" onclick="gotofighter(1)"><img src="../src/images/luchadores/LIMON.png" class="estelar" alt="Fighter 1"></div>
+        */
+       fetch('../src/js/guerreros.json')
+        .then(response => response.json())
+        .then(data => {
+            for(var i in data){
+                console.log(data[i])
+                var fightercard = document.createElement("div");
+                fightercard.classList.add("fighter-card");
+
+                fightercard.innerHTML = `
+                    <img src="${data[i].image}" alt="Fighter ${i}" onclick="gotofighter(${data[i].id})">
+                `;
+
+                document.querySelector(".fighters-grid").appendChild(fightercard)
+            }
+        })
+        .catch(error => console.error('Error al cargar los datos del guerrero:', error));
+    </script>
+</body>
+</html>

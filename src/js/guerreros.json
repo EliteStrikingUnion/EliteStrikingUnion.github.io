@@ -19,15 +19,15 @@
         "id": 2,
         "name": "Lendechy",
         "image": "/src/images/luchadores/leo-lendechy.JPG",
-        "bio": "Lendechy es un luchador versátil con habilidades en boxeo y kickboxing. Su estilo agresivo y su egocentrismo lo convierten en un oponente formidable en el ring.",
+        "bio": "Lendechy es un luchador enfocado. Chaparro y guapo, pero más valiente que un león en la jungla.",
          "record": {
             "wins": 0,
             "losses": 0,
             "draws": 0
         },
        "edad": 14,
-        "style": "Karate",
-        "height": "172cm",
+        "style": "Box",
+        "height": "159cm",
         "weight": "48kg"
     },
     "Iker": {
@@ -41,7 +41,7 @@
             "draws": 0
         },
         "edad": 14,
-        "style": "Karate",
+        "style": "MMA",
         "height": "172cm",
         "weight": "48kg"
     },
@@ -60,10 +60,10 @@
         "height": "172cm",
         "weight": "48kg"
     },
-    "Lucho": {
+    "El rey infame": {
         "id": 5,
         "name": "El rey infame",
-        "image": "/src/images/luchadores/wuermensol.png",
+        "image": "/src/images/luchadores/luciano.png",
         "bio": "Peleador disciplinado y constante, conocido como 'El rey infame'. Siempre busca dar lo mejor en el combate.",
         "record": {
             "wins": 0,
@@ -87,22 +87,7 @@
         },
         "edad": "14",
         "style": "Box",
-        "height": "165cm",
+        "height": "168cm",
         "weight": "67kg"
-    },
-    "Placeholder": {
-        "id": 67,
-        "name": "",
-        "image": "",
-        "bio": "",
-        "record": {
-            "wins": 0,
-            "losses": 0,
-            "draws": 0
-        },
-        "edad": "",
-        "style": "",
-        "height": "",
-        "weight": ""
     }
 }
