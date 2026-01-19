@@ -104,5 +104,20 @@
         "style": "Box principiante",
         "height": "171cm",
         "weight": "55kg"
+    },
+    "Edy Ruiz": {
+        "id": 8,
+        "name": "Edy Ruiz",
+        "image": "/src/images/luchadores/EdyRuiz.PNG",
+        "bio": "Enano al ataque",
+        "record": {
+            "wins": 0,
+            "losses": 0,
+            "draws": 0
+        },
+        "edad": "15",
+        "style": "Box",
+        "height": "160cm",
+        "weight": "56kg"
     }
 }
