@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESU</title>
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="shortcut icon" href="../src/images/500x500.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    EVENTOS
+                </li>
+                <li>
+                    RANKINGS
+                </li>
+            </ul>
+        </nav>
+        <img onclick="gohome()" src="../src/images/textlogo.png" alt="logo">
+        <select id="collapsed-menu" onchange="headerselectionpage(this.value)">
+            <option value="inicio" name="inicio" selected disabled onselect="gohome()">INICIO</option>
+            <option value="eventos" name="eventos">EVENTOS</option>
+            <option value="rankings" name="rankings">RANKINGS</option>
+            <option value="redes" name="redes">REDES SOCIALES</option>
+            <option value="apuestas" name="apuestas">APUESTAS</option>
+            <option value="reglas" name="reglas">REGLAS</option>
+            <option value="guerrero" name="guerrero">GUERRERO</option>
+        </select>
+        <nav>
+            <li>
+                REDES SOCIALES
+            </li>
+            <li>
+                APUESTAS
+            </li>
+        </nav>
+    </header>
+    <content>
+
+    </content>
+    <div class="cookies">
+        <h1>
+            Aceptar cookies?
+        </h1>
+        <nav>
+            <button onclick="biscuits.accept()">
+                Aceptar
+            </button>
+            <button onclick="biscuits.reject()">
+                Rechazar todas
+            </button>
+        </nav>
+    </div>
+    <script src="../src/js/index.js"></script>
+    <script>
+        const path = window.location.pathname;
+        const page = path.split("/").pop().split(".")[0];
+        const hash = window.location.hash;
+            const params = new URLSearchParams(hash.slice(1));
+            const id = params.get('id'); 
+            console.log("ID del guerrero:", id);
+
+        //obtener el id y ver si hace match con algun guerrero de la base de datos en /src/js/guerreros.json y prevenir data.find is not a function
+        /*estructura de el json:
+            {
+ {
+    "Limon": {
+        "id": 1,
+        "name": "Daniel Limón",
+        "image": "/src/images/luchadores/limon.png",
+        "bio": "El anfitrion de la liga ESU. Experto en karate y kickboxing, Daniel 'Limon' es conocido por su estilo agresivo y su capacidad para adaptarse a diferentes oponentes en el ring. Conocido por sus 'apariciones estelares' en combates importantes, Limón es reconocido por su estilo unico en el ring. Siendo anonimo en la liga, su identidad real es un misterio para muchos pero esperanzador para otros.",
+        "record": {
+            "wins": 0,
+            "losses": 0,
+            "draws": 0
+        },
+        "style": "Karate y Kickboxing",
+        "height": "172cm",
+        "weight": "70kg"
+    },
+    "Luciano": {
+        "id": 2,
+        "name": "Luciano",
+        "image": "/src/images/luchadores/luciano.png",
+        "bio": "Luciano es un luchador versátil con habilidades en boxeo y kickboxing. Su estilo agresivo y su egocentrismo lo convierten en un oponente formidable en el ring.",
+        "record": {
+            "wins": 0,
+            "losses": 0,
+            "draws": 0
+        }
+    },
+    "Iker": {
+        "id": 3,
+        "name": "Iker Andre Moctezuma",
+        "image": "/src/images/luchadores/iker.png",
+        "bio": "Iker es un luchador principiante en Artes Marciales Mixtas (MMA). A pesar de su falta de experiencia, su dedicación y habilidades técnicas lo hacen un competidor prometedor.",
+        "record": {
+            "wins": 0,
+            "losses": 0,
+            "draws": 0
+        }
+    }
+}
+        */
+       fetch('../src/js/guerreros.json')
+        .then(response => response.json())
+        .then(data => {
+            const guerrero = Object.values(data).find(g => g.id == id);
+            if (guerrero) {
+                console.log("Datos del guerrero:", guerrero);
+                //actualizar el contenido de la pagina con los datos del guerrero usando "hero"
+                const content = document.querySelector('content');
+
+                if(!(guerrero.edad)) guerrero.edad = "?";
+                if(!(guerrero.weight)) guerrero.weight = "?";
+                if(!(guerrero.height)) guerrero.height = "?";
+
+                content.innerHTML = `
+                <section class="hero">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content">
+                        <h1>${guerrero.name}</h1>
+                        <p class="tagline">${guerrero.style}</p>
+                    </div>
+                        <div class="estelar-sign">
+                            ${guerrero.estelar}
+                        </div>
+                </section>
+                <br><br>
+                <div class="record">
+                        <h2 style="font-family: 'Arial';">${guerrero.bio}</h2>
+                        <table class="record-table">
+                            <tr>
+                                <th>Victorias</th>
+                                <th>Derrotas</th>
+                                <th>Empates</th>
+                            </tr>
+                            <tr>
+                                <td>${guerrero.record.wins}</td>
+                                <td>${guerrero.record.losses}</td>
+                                <td>${guerrero.record.draws}</td>
+                            </tr>
+                        </table>
+                        <table class="specs-table">
+                            <tr>
+                                <th>Edad</th>
+                                <th>Peso</th>
+                                <th>Altura</th>
+                            </tr>
+                            <tr>
+                                <td>${guerrero.edad}</td>
+                                <td>${guerrero.weight}</td>
+                                <td>${guerrero.height}</td>
+                            </tr>
+                        </table>
+                    </div>
+                `;
+
+                document.querySelector('.hero').style.backgroundImage = `url(${guerrero.image})`;
+                if(!(guerrero.estelar)){
+                    document.querySelector(".estelar-sign").remove();
+                }
+
+            } else {
+                console.log("No se encontró ningún guerrero con ese ID.");
+            }
+        })
+        .catch(error => console.error('Error al cargar los datos del guerrero:', error));
+    </script>
+</body>
+</html>

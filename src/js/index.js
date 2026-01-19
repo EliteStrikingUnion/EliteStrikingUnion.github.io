@@ -51,6 +51,10 @@ window.addEventListener("load", () => {
 function headerselectionpage(val){
     switch (val) {
         case "inicio":
+            if(currentpage == "/"){
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                return;
+            }
             document.location.href = "/";
             gohome();
             break;
@@ -74,4 +78,22 @@ function headerselectionpage(val){
             gohome();
             break;
     }
+}
+/* prevent zoom in or out */
+document.addEventListener("gesturestart", function(e) {
+    e.preventDefault();
+});
+document.addEventListener("gesturechange", function(e) {
+    e.preventDefault();
+});
+document.addEventListener("gestureend", function(e) {
+    e.preventDefault();
+});
+
+function gotofighterpage(){
+    document.location.href = "/luchadores";
+}
+
+function gotofighter(id){
+    document.location.href = "/guerrero/#id=" + id;
 }

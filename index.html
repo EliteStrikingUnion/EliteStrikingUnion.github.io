@@ -56,11 +56,9 @@
     </div>
   </section>
 
-  <!-- Upcoming Events Teaser (la sección más importante para hype) -->
   <section id="eventos" class="upcoming">
     <h2>Próximos Combates</h2>
     <div class="events-grid">
-      <!-- Card de evento ejemplo (duplica para más) -->
       <div class="event-card highlighted">
         <div class="event-date">15 FEB 2026</div>
         <div class="event-title">ESU Fight Night 01</div>
@@ -72,7 +70,6 @@
     </div>
   </section>
 
-  <!-- Quick Rules / Sobre ESU -->
   <section id="reglas" class="rules">
     <h2>Reglas de Striking Puro</h2>
     <ul class="rules-list">
@@ -85,18 +82,18 @@
     <a onclick="headerselectionpage('reglas')" class="btn full">Ver Reglas Completas</a>
   </section>
 
-  <!-- Fighters Teaser (para generar misterio y hype) -->
   <section class="fighters">
     <h2>Nuestros Guerreros</h2>
     <p class="teaser-text">Luchadores con experiencia real en boxeo, karate y taekwondo. ¿Listo?</p>
     <div class="fighters-grid">
-      <!-- Siluetas o fotos con filtro oscuro, sin nombres -->
-      <div class="fighter-card"><img src="./src/images/luchadores/leo-lendechy.JPG" alt="Fighter 1"></div>
-      <div class="fighter-card"><img src="./src/images/luchadores/CARLO.png" alt="Fighter 2"></div>
-      <div class="fighter-card"><img src="./src/images/luchadores/iker.png" alt="Fighter 3"></div>
-      <div class="fighter-card"><img src="./src/images/luchadores/HECTOR.png" alt="Fighter 4"></div>
-      <div class="fighter-card"><img src="./src/images/luchadores/Peña.png" alt="Fighter 5"></div>
-      <div class="fighter-card"><img src="./src/images/luchadores/luciano.png" alt="Fighter 6"></div>
+      <div class="fighter-card" onclick="gotofighter(1)"><img src="./src/images/luchadores/LIMON.png" class="estelar" alt="Fighter 1"></div>
+      <div class="fighter-card" onclick="gotofighter(2)"><img src="./src/images/luchadores/leo-lendechy.JPG" alt="Fighter 2"></div>
+      <div class="fighter-card" onclick="gotofighter(3)"><img src="./src/images/luchadores/CARLO.png" alt="Fighter 3"></div>
+      <div class="fighter-card" onclick="gotofighterpage()">
+        <button>
+          Ver más
+        </button>
+      </div>
     </div>
   </section>
 

@@ -1,0 +1,43 @@
+{
+    "Limon": {
+        "id": 1,
+        "name": "Daniel Limón",
+        "image": "/src/images/luchadores/lemon-hero.png",
+        "bio": "El anfitrion de la liga ESU. Experto en karate y kickboxing, Daniel 'Limon' es conocido por su estilo agresivo y su capacidad para adaptarse a diferentes oponentes en el ring. Conocido por sus 'apariciones estelares' en combates importantes, Limón es reconocido por su estilo unico en el ring. Casi resistente a balas lo hace un guerrero disciplinado en el ring, teniendo el mayor hype entre la multitud.",
+        "record": {
+            "wins": 0,
+            "losses": 0,
+            "draws": 0
+        },
+        "style": "Karate y Kickboxing",
+        "height": "172cm",
+        "weight": "48kg",
+        "estelar": "estelar",
+        "edad": 14
+    },
+    "Lendechy": {
+        "id": 2,
+        "name": "Lendechy",
+        "image": "/src/images/luchadores/leo-lendechy.JPG",
+        "bio": "Lendechy es un luchador versátil con habilidades en boxeo y kickboxing. Su estilo agresivo y su egocentrismo lo convierten en un oponente formidable en el ring.",
+         "record": {
+            "wins": 0,
+            "losses": 0,
+            "draws": 0
+        },
+        "style": "Karate y Kickboxing",
+        "edad": 14
+    },
+    "Iker": {
+        "id": 3,
+        "name": "Iker Andre Moctezuma",
+        "image": "/src/images/luchadores/iker.png",
+        "bio": "Iker es un luchador principiante en Artes Marciales Mixtas (MMA). A pesar de su falta de experiencia, su dedicación y habilidades técnicas lo hacen un competidor prometedor.",
+        "record": {
+            "wins": 0,
+            "losses": 0,
+            "draws": 0
+        },
+        "edad": 14
+    }
+}

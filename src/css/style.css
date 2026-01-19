@@ -213,6 +213,15 @@ header select{
   line-height: 0.9;
 }
 
+.hero .estelar-sign{
+  position: absolute;
+  bottom:  5%;
+  right: 10%;
+  background: gold;
+  color: black;
+  padding: 10px 20px;
+}
+
 .tagline {
   font-size: clamp(2.2rem, 5vw, 4rem);
   font-weight: 700;
@@ -454,6 +463,61 @@ header select{
 .fighter-card img:hover {
   filter: grayscale(0%) brightness(1);
   border-color: #b22222;
+}
+.fighter-card button{
+  padding: 1.2rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  border: none;
+  cursor: pointer;
+  background: #b22222;
+  color: #fff;
+  box-shadow: 0 0 25px rgba(178, 34, 34, 0.4);
+  transition: all 0.25s ease;
+  width: 100%;
+}
+.record{
+  margin-left: 5vw;
+  padding-right: 5vw;
+}
+.record h2{
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-align: justify;
+}
+.record table{
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+  text-align: center;
+  border: 2px solid #b22222;
+  padding-top: 2vw;
+  font-size: 1.1rem;
+}
+.record th, .record td{
+  border: 1px solid #b22222;
+  padding: 0.5rem;
+}
+.record th{
+  background: #b22222;
+  color: #000;
+}
+.record td{
+  background: #1b1b1b;
+  color: #fff;
+}
+
+.estelar{
+  border: 4px solid gold !important;
+  box-shadow: 0 0 20px gold;
+}
+.estelar:hover{
+  border: 4px solid gold !important;
+  box-shadow: 0 0 40px gold; 
+  transform: translateY(-5px);
+  scale: 1.05;
 }
 
 /* responsive */
