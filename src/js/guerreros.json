@@ -2,7 +2,7 @@
     "Limon": {
         "id": 1,
         "name": "Daniel Limón",
-        "image": "/src/images/luchadores/lemon-hero.png",
+        "image": "/src/images/luchadores/LIMON.png",
         "bio": "El anfitrion de la liga ESU. Experto en karate y kickboxing, Daniel 'Limon' es conocido por su estilo agresivo y su capacidad para adaptarse a diferentes oponentes en el ring. Conocido por sus 'apariciones estelares' en combates importantes, Limón es reconocido por su estilo unico en el ring. Casi resistente a balas lo hace un guerrero disciplinado en el ring, teniendo el mayor hype entre la multitud.",
         "record": {
             "wins": 0,

@@ -91,10 +91,15 @@
             for(var i in data){
                 console.log(data[i])
                 var fightercard = document.createElement("div");
+                var estelar = false;
                 fightercard.classList.add("fighter-card");
 
+                if(data[i].estelar){
+                    estelar = "estelar"
+                }
+
                 fightercard.innerHTML = `
-                    <img src="${data[i].image}" alt="Fighter ${i}" onclick="gotofighter(${data[i].id})">
+                    <img src="${data[i].image}" class="${estelar}" alt="Fighter ${i}" onclick="gotofighter(${data[i].id})">
                 `;
 
                 document.querySelector(".fighters-grid").appendChild(fightercard)
