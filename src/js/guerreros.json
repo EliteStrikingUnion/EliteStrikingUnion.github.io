@@ -1,9 +1,9 @@
 {
     "Limon": {
         "id": 1,
-        "name": "Daniel Limón",
-        "image": "/src/images/luchadores/LIMON.png",
-        "bio": "El anfitrion de la liga ESU. Experto en karate y kickboxing, Daniel 'Limon' es conocido por su estilo agresivo y su capacidad para adaptarse a diferentes oponentes en el ring. Conocido por sus 'apariciones estelares' en combates importantes, Limón es reconocido por su estilo unico en el ring. Casi resistente a balas lo hace un guerrero disciplinado en el ring, teniendo el mayor hype entre la multitud.",
+        "name": "Limón",
+        "image": "/src/images/luchadores/lemon-hero.png",
+        "bio": "Limón es conocido por su estilo agresivo y su capacidad para adaptarse a diferentes oponentes en el ring, manteniendo su estilo sin piedad mezclando patadas y golpes inimaginables. Limón es reconocido por su estilo unico en el ring. Casi resistente a balas lo hace un guerrero disciplinado en el ring, teniendo el mayor hype entre la multitud.",
         "record": {
             "wins": 0,
             "losses": 0,
@@ -11,7 +11,7 @@
         },
         "style": "Karate y Kickboxing",
         "height": "172cm",
-        "weight": "48kg",
+        "weight": "52kg",
         "estelar": "estelar",
         "edad": 14
     },
@@ -116,8 +116,34 @@
             "draws": 0
         },
         "edad": "15",
+        "style": "Box"
+    },
+    "ALDEBARAN": {
+        "id": 9,
+        "name": "Alde",
+        "image": "/src/images/luchadores/ALDEBARAN.PNG",
+        "bio": "La estrella mas grande de la constelación.",
+        "record": {
+            "wins": 0,
+            "losses": 0,
+            "draws": 0
+        },
+        "edad": "14",
         "style": "Box",
-        "height": "160cm",
-        "weight": "56kg"
+        "height": "170cm"
+    },
+    "Ronaldo": {
+        "id": 10,
+        "name": "Ronaldo",
+        "image": "/src/images/luchadores/RONALDO.PNG",
+        "bio": "Angy Huerta.",
+        "record": {
+            "wins": 0,
+            "losses": 0,
+            "draws": 0
+        },
+        "edad": "14",
+        "style": "Box",
+        "height": "163cm"
     }
 }

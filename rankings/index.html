@@ -119,5 +119,42 @@
         </nav>
     </div>
     <script src="../src/js/index.js"></script>
+    <script>
+        /*
+        <tr>
+    <td class="tg-0lax left-column">
+        <img src="../src/images/luchadores/siluetas/hector-silueta.png" alt="">
+        <center>
+            <p>
+                HÉCTOR
+            </p>
+        </center>
+    </td>
+    <td class="tg-0lax"></td>
+  </tr>
+        */
+        fetch('../src/js/guerreros.json')
+        .then(response => response.json())
+        .then(data => {
+            for(var i in data){
+                var tr_new = document.createElement("tr");
+                tr_new.classList.add("tg-0lax");
+                tr_new.classList.add("left-column");
+
+                tr_new.innerHTML = `
+                    <td class="tg-0lax left-column">
+                        <img src="../src/images/luchadores/siluetas/hector-silueta.png" alt="">
+                        <center>
+                            <p>
+                                HÉCTOR
+                            </p>
+                        </center>
+                    </td>
+                    <td class="tg-0lax"></td>
+                `;
+            }
+        })
+        .catch(error => console.error('Error al cargar los datos del guerrero:', error));
+    </script>
 </body>
 </html>

@@ -1,4 +1,5 @@
 var currentpage = window.location.pathname;
+var bidmoney = 0;
 
 function gohome(){
     document.querySelector("header select").value = "inicio";

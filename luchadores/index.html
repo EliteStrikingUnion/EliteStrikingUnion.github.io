@@ -41,9 +41,10 @@
         </nav>
     </header>
     <content>
+        <br><br><br><br><br>
    <section class="fighters">
     <h2>Nuestros Guerreros</h2>
-    <p class="teaser-text">¿Listo?</p>
+    <p class="teaser-text">De lo mejor.</p>
     <div class="fighters-grid">
 
     </div>
@@ -95,11 +96,11 @@
                 fightercard.classList.add("fighter-card");
 
                 if(data[i].estelar){
-                    estelar = "estelar"
+                    estelar = "ESTELAR";
                 }
 
                 fightercard.innerHTML = `
-                    <img src="${data[i].image}" class="${estelar}" alt="Fighter ${i}" onclick="gotofighter(${data[i].id})">
+                    <img src="${data[i].image}" class="${estelar}" alt="Fighter ${i}" onclick="gotofighter(${data[i].id})" title="${data[i].name} - ESU">
                 `;
 
                 document.querySelector(".fighters-grid").appendChild(fightercard)
