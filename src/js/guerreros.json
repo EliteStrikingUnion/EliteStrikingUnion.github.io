@@ -45,21 +45,6 @@
         "height": "172cm",
         "weight": "48kg"
     },
-    "Wuermensol": {
-        "id": 4,
-        "name": "Wuermensol",
-        "image": "/src/images/luchadores/Wuermensol.png",
-        "bio": "Para un chingon hay otro más chingon. Y ahí entro yo.",
-        "record": {
-            "wins": 0,
-            "losses": 0,
-            "draws": 0
-        },
-        "edad": "14",
-        "style": "Karate",
-        "height": "172cm",
-        "weight": "48kg"
-    },
     "El rey infame": {
         "id": 5,
         "name": "El rey infame",
