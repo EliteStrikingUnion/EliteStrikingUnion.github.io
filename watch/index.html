@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESU</title>
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="shortcut icon" href="../src/images/500x500.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    EVENTOS
+                </li>
+                <li>
+                    RANKINGS
+                </li>
+            </ul>
+        </nav>
+        <img onclick="gohome()" src="../src/images/textlogo.png" alt="logo">
+        <select id="collapsed-menu" onchange="headerselectionpage(this.value)">
+            <option value="inicio" name="inicio" selected disabled onselect="gohome()">INICIO</option>
+            <option value="eventos" name="eventos">EVENTOS</option>
+            <option value="rankings" name="rankings">RANKINGS</option>
+            <option value="redes" name="redes">REDES SOCIALES</option>
+            <option value="apuestas" name="apuestas">APUESTAS</option>
+            <option value="watch" name="watch">WATCH</option>
+        </select>
+        <nav>
+            <li>
+                REDES SOCIALES
+            </li>
+            <li>
+                APUESTAS
+            </li>
+        </nav>
+    </header>
+    <content>
+        <div class="esu-video">
+            <video poster="/src/images/poster-art/fight-night-01.png"
+            playsinline 
+            webkit-playsinline
+            autoplay
+            src="http://192.168.100.183:5500/src/video/output_optimized.mp4"
+            >
+                <h1>Parece que tu navegador no soporta video.</h1>
+            </video>
+            <div class="controls">
+                <button class="rewind" onclick="videotime(-5)">-5s</button>
+                <button class="playpause" onclick="playpausestream();">
+                    <svg width="800px" height="800px" viewBox="-0.5 0 7 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Dribbble-Light-Preview" transform="translate(-347.000000, -3766.000000)" fill="#fff">
+                                <g id="icons" transform="translate(56.000000, 160.000000)">
+                                    <path d="M296.494737,3608.57322 L292.500752,3606.14219 C291.83208,3605.73542 291,3606.25002 291,3607.06891 L291,3611.93095 C291,3612.7509 291.83208,3613.26444 292.500752,3612.85767 L296.494737,3610.42771 C297.168421,3610.01774 297.168421,3608.98319 296.494737,3608.57322" id="play-[#1003]"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+                <button  class="forward" onclick="videotime(+5)">+5s</button>
+            </div>
+            <h1>
+                ESU presenta: Fight Night 01
+            </h1>
+        </div>
+    </content>
+    <div class="cookies">
+        <h1>
+            Aceptar cookies?
+        </h1>
+        <nav>
+            <button onclick="biscuits.accept()">
+                Aceptar
+            </button>
+            <button onclick="biscuits.reject()">
+                Rechazar todas
+            </button>
+        </nav>
+    </div>
+    <script src="../src/js/index.js"></script>
+    <script>
+        const video = document.getElementById('esuPlayer');
+        const playBtn = document.querySelector('.playpause');
+
+        const playIcon = '<svg width="800" height="800" viewBox="-0.5 0 7 7" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M296.494737,3608.57322 L292.500752,3606.14219 C291.83208,3605.73542 291,3606.25002 291,3607.06891 L291,3611.93095 C291,3612.7509 291.83208,3613.26444 292.500752,3612.85767 L296.494737,3610.42771 C297.168421,3610.01774 297.168421,3608.98319 296.494737,3608.57322"/></svg>';
+        const pauseIcon = '<svg width="800" height="800" viewBox="-1 0 8 8" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M172,3605 C171.448,3605 171,3605.448 171,3606 L171,3612 C171,3612.552 171.448,3613 172,3613 C172.552,3613 173,3612.552 173,3612 L173,3606 C173,3605.448 172.552,3605 172,3605 M177,3606 L177,3612 C177,3612.552 176.552,3613 176,3613 C175.448,3613 175,3612.552 175,3612 L175,3606 C175,3605.448 175.448,3605 176,3605 C176.552,3605 177,3605.448 177,3606"/></svg>';
+
+        function playpausestream() {
+            if (video.paused || video.ended) {
+                video.play().catch(err => console.log("Error al reproducir:", err));
+                playBtn.innerHTML = pauseIcon;
+            } else {
+                video.pause();
+                playBtn.innerHTML = playIcon;
+            }
+        }
+
+        function videotime(seconds) {
+            video.currentTime += seconds;
+        }
+
+        video.addEventListener('play', () => playBtn.innerHTML = pauseIcon);
+        video.addEventListener('pause', () => playBtn.innerHTML = playIcon);
+        video.addEventListener('error', () => {
+            alert("Error cargando el video. Intenta recargar o usa otro navegador.");
+        });
+    </script>
+</body>
+</html>

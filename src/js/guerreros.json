@@ -5,7 +5,7 @@
         "image": "/src/images/luchadores/lemon-hero.png",
         "bio": "Limón es conocido por su estilo agresivo y su capacidad para adaptarse a diferentes oponentes en el ring, manteniendo su estilo sin piedad mezclando patadas y golpes inimaginables. Limón es reconocido por su estilo unico en el ring. Casi resistente a balas lo hace un guerrero disciplinado en el ring, teniendo el mayor hype entre la multitud.",
         "record": {
-            "wins": 0,
+            "wins": 1,
             "losses": 0,
             "draws": 0
         },
@@ -82,7 +82,7 @@
         "bio": "No vengo a ganar, vengo a divertirme.",
         "record": {
             "wins": 0,
-            "losses": 0,
+            "losses": 1,
             "draws": 0
         },
         "edad": "14",

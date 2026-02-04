@@ -688,3 +688,40 @@ content{
   overflow-x: hidden;
   display: block;
 }
+video{
+  width: 100%;
+  height: calc(100% - 15vh);
+  background: #0a0a0a;
+  top: 15vh;
+  position: absolute;
+}
+.esu-video h1{
+  position: absolute;
+  bottom: 5vh;
+  left: 5vh;
+}
+.esu-video .controls{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+.esu-video .controls button svg{
+  width: 2.2rem;
+  height: 2.2rem;
+}
+.esu-video .controls button{
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, .2);
+  background-color: rgba(255, 255, 255, .1);
+  outline: none;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  position: relative;
+  backdrop-filter: blur(50px);
+  color: white;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}

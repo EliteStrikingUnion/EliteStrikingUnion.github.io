@@ -57,50 +57,7 @@
     </th>
   </tr></thead>
 <tbody>
-  <tr>
-    <td class="tg-0lax left-column">
-        <img src="../src/images/luchadores/siluetas/carlo-silueta.png" alt="">
-        <center>
-            <p>
-                CARLO
-            </p>
-        </center>
-    </td>
-    <td class="tg-0lax"></td>
-  </tr>
-  <tr>
-    <td class="tg-0lax left-column">
-        <img src="../src/images/luchadores/siluetas/iker-silueta.png" alt="">
-        <center>
-            <p>
-                IKER
-            </p>
-        </center>
-    </td>
-    <td class="tg-0lax"></td>
-  </tr>
-  <tr>
-    <td class="tg-0lax left-column">
-        <img src="../src/images/luchadores/siluetas/ferbolas-silueta.png" alt="">
-        <center>
-            <p>
-                FERNANDO
-            </p>
-        </center>
-    </td>
-    <td class="tg-0lax"></td>
-  </tr>
-  <tr>
-    <td class="tg-0lax left-column">
-        <img src="../src/images/luchadores/siluetas/hector-silueta.png" alt="">
-        <center>
-            <p>
-                HÉCTOR
-            </p>
-        </center>
-    </td>
-    <td class="tg-0lax"></td>
-  </tr>
+ 
 </tbody>
 </table>
     <br><br><br><br><br><br><br><br><br><br>
@@ -136,6 +93,7 @@
         fetch('../src/js/guerreros.json')
         .then(response => response.json())
         .then(data => {
+            console.log(data)
             for(var i in data){
                 var tr_new = document.createElement("tr");
                 tr_new.classList.add("tg-0lax");
@@ -143,15 +101,28 @@
 
                 tr_new.innerHTML = `
                     <td class="tg-0lax left-column">
-                        <img src="../src/images/luchadores/siluetas/hector-silueta.png" alt="">
+                        <img src="${data[i].image}" alt="">
                         <center>
                             <p>
-                                HÉCTOR
+                                ${data[i].name}
                             </p>
                         </center>
                     </td>
-                    <td class="tg-0lax"></td>
+                    <td class="tg-0lax">
+                        <br><br>
+                        <toes style="width: 100%; display: flex; justify-content: space-evenly;">
+                            <h2>Victorias</h2>    
+                            <h2>Derrotas</h2>    
+                            <h2>Empates</h2>        
+                        </toes>
+                        <knees style="width: 100%; display: flex; justify-content: space-evenly;">
+                            <h2>${data[i].record.wins}</h2>    
+                            <h2>${data[i].record.losses}</h2>    
+                            <h2>${data[i].record.draws}</h2>        
+                        </knees>
+                    </td>
                 `;
+                document.querySelector("table tbody").appendChild(tr_new);
             }
         })
         .catch(error => console.error('Error al cargar los datos del guerrero:', error));
