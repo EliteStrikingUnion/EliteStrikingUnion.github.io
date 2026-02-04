@@ -706,6 +706,7 @@ video{
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
+  transition: opacity .3s;
 }
 .esu-video .controls button svg{
   width: 2.2rem;
@@ -724,4 +725,7 @@ video{
   color: white;
   margin-left: 1vw;
   margin-right: 1vw;
+}
+.esu-video .controls.hidden{
+  opacity: 0;
 }
